@@ -1,0 +1,88 @@
+1) Посмотреть где я---pwd
+2) Создать папку---mkdir dz_1
+3) Зайти в папку---cd dz_1
+4) Создать 3 папки---mkdir hw_1 hw_2 hw_3
+5) Зайти в любоую папку---cd dz_1/hw_1
+6) Создать 5 файлов (3 txt, 2 json)---touch file1.txt file2.txt file3.txt file4.json file5.json
+7) Создать 3 папки---mkdir hw_1 hw_2 hw_3
+8) Вывести список содержимого папки---ls -la
+9) + Открыть любой txt файл---cat file1.txt
+10) + написать туда что-нибудь, любой текст.
+cat >> file1.txt
+1)Cat
+2)Dog
+3)Fish
+11) + сохранить и выйти.---ctrl+s
+12) Выйти из папки на уровень выше---cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+---mv hw_1/file1.txt hw_1/file2.txt hw_2
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+---cp hw_2/file1.txt hw_2/file2.txt hw_3
+15) Найти файл по имени
+--- find ./hw_1 -iname "file*"
+./hw_1/file3.txt
+./hw_1/file4.json
+./hw_1/file5.json
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает. 
+---  tail -f file3.txt | grep [b]
+3)bash
+17) вывести несколько первых строк из текстового файла---
+head -n3 ./file3.txt
+1)Home
+2)no home
+3)bash
+18) вывести несколько последних строк из текстового файла---
+tail -n2  ./file3.txt
+3)bash
+4) no bash
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.--
+less ./file3.txt
+20) вывести дату и время--- date
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5006/terminal-hw-request
+curl http://162.55.220.72:5006/terminal-hw-request
+{
+  "Intro": "Hello!! This is your the first response from server",
+  "Tasks": {
+    "Task_1": "Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)",
+    "result": [
+      "Your_String",
+      "Your_number"
+    ]
+  }
+}
+
+ curl "http://162.55.220.72:5005/get_method?name=Vlad&age=27"
+[1] 263
+
+Влад@KOMPUTER MINGW64 /c/Testing/Terminal/dz_1
+$ [
+  "Vlad",
+  "27"
+]
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+vim script_1.sh
+#!/bin/bash
+        cd dz_1
+        mkdir hw_1 hw_2 hw_3
+        cd dz_1/hw_1
+        touch file1.txt file2.txt file3.txt file4.json file5.json
+        mkdir hw_1 hw_2 hw_3
+        ls -la
+        mv hw_1/file1.txt hw_1/file2.txt hw_2
+bash script_1.sh
+
+
+
+
+=====================
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir foldername
+3) Зайти в папку - cd foldername
