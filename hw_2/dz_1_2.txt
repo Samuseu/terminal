@@ -196,4 +196,5 @@ $ grep -rli sec | xargs -p -n1 -i rm {}
 rm inner_dir_1/tf_5.txt?...y
 rm new.txt?...y
  40. Просто вывести в терминал строку “Good job!!” 
-$ echo -n Good job
+$ echo '"Good Job!!"'
+"Good Job!!"
